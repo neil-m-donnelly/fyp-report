@@ -1,0 +1,147 @@
+\begin{thebibliography}{xx}
+
+\harvarditem{Abelson \harvardand\ Sussman}{1996}{structureAndInterpretation}
+Abelson, H. \harvardand\ Sussman, G.~J.  \harvardyearleft 1996\harvardyearright
+  .
+\newblock {\em {S}tructure and {I}nterpretation of {C}omputer {P}rograms}, 2nd
+  edn, {T}he {MIT} {P}ress.
+
+\harvarditem{Agarwal \harvardand\ Levy}{2007}{theKillRule}
+Agarwal, A. \harvardand\ Levy, M.  \harvardyearleft 2007\harvardyearright .
+\newblock The {KILL} {R}ule for {M}ulticore, {\em {DAC} '07 {P}roceedings of
+  the 44th annual {D}esign {A}utomation {C}onference}, {ACM} {N}ew {Y}ork,
+  {NY}, {USA}, pp.~750--753.
+
+\harvarditem{Amdahl}{1967}{amdahl}
+Amdahl, G.~M.  \harvardyearleft 1967\harvardyearright .
+\newblock Validity of the {S}ingle-{P}rocessor {A}pproach to {A}chieving
+  {L}arge-{S}cale {C}omputing {C}apabilities, {\em Proc. Am. Federation of
+  Information Processing Societies Conf.}, {AFIPS} Press, pp.~483--485.
+
+\harvarditem{Backus}{1959}{bnf}
+Backus, J.~W.  \harvardyearleft 1959\harvardyearright .
+\newblock {T}he {S}yntax and {S}emantics of the {P}roposed {I}nternational
+  {A}lgebraic {L}anguage of the {Z}urich {ACM}-{GAMM} {C}onference, {\em
+  {P}roceedings of the {I}nternational {C}onference on {I}nformation
+  {P}rocessing}, {UNESCO}, pp.~125--132.
+
+\harvarditem[Barendregt et~al.]{Barendregt, Manzonetto \harvardand\
+  Plasmeijr}{2013}{ImperativeFunctional}
+Barendregt, H., Manzonetto, G. \harvardand\ Plasmeijr, R.  \harvardyearleft
+  2013\harvardyearright .
+\newblock {T}he {I}mperative and {F}unctional {P}rogramming {P}aradigm, {\em
+  {A}lan {T}uring - {H}is {W}ork and {I}mpact}, {E}lsevier.
+
+\harvarditem{Borkar}{2007}{thousandCoreChips}
+Borkar, S.  \harvardyearleft 2007\harvardyearright .
+\newblock Thousand {C}ore {C}hips-{A} {T}echnology {P}erspective, {\em {DAC}
+  '07 {P}roceedings of the 44th annual {D}esign {A}utomation {C}onference},
+  {ACM} {N}ew {Y}ork, {NY}, {USA}, pp.~746--749.
+
+\harvarditem{Church}{1932}{church1932}
+Church, A.  \harvardyearleft 1932\harvardyearright .
+\newblock A set of {P}ostulates for the {F}oundation of {L}ogic, {\em Annals of
+  {M}athematics, second series} pp.~346--366.
+
+\harvarditem{Church}{1936}{church1936}
+Church, A.  \harvardyearleft 1936\harvardyearright .
+\newblock An {U}nsolvable {P}roblem of {E}lementary {N}umber {T}heory, {\em
+  American Journal of Mathematics} pp.~346--366.
+
+\harvarditem{Clegg}{1994}{moscow}
+Clegg, D.  \harvardyearleft 1994\harvardyearright .
+\newblock {\em {CASE} {M}ethod {F}ast-{T}rack: {A RAD} {A}pproach}, 1st edn,
+  {A}ddison {W}esley.
+
+\harvarditem{Copeland}{2004}{churchTuringThesis}
+Copeland, J.  \harvardyearleft 2004\harvardyearright .
+\newblock The {C}hurch-{T}uring {T}hesis, {\em Neuro{Q}uantology} {\bf
+  2}(2):~101--115.
+
+\harvarditem{Gustafson}{1988}{reevaluateAmdahl}
+Gustafson, J.~L.  \harvardyearleft 1988\harvardyearright .
+\newblock Reevaluating {A}mdahl's {L}aw, {\em Communications of the {ACM}} {\bf
+  31}(5):~532--533.
+
+\harvarditem{Hill \harvardand\ Marty}{2008}{amdahlsLawMultiCore}
+Hill, M.~D. \harvardand\ Marty, M.~R.  \harvardyearleft 2008\harvardyearright .
+\newblock Amdahl's {L}aw in the {M}ulticore {E}ra, {\em Computer} {\bf
+  41}(7):~33--38.
+
+\harvarditem{Hinsen}{2009}{promisesOfFunctionalProgramming}
+Hinsen, K.  \harvardyearleft 2009\harvardyearright .
+\newblock The {P}romises of {F}unctional {P}rogramming, {\em Computing in
+  {S}cience \& {E}ngineering} {\bf 11}(4):~86--90.
+
+\harvarditem[Hwu et~al.]{Hwu, Keutzer \harvardand\
+  Mattson}{2008}{theConcurrencyChallenge}
+Hwu, W., Keutzer, K. \harvardand\ Mattson, T.~G.  \harvardyearleft
+  2008\harvardyearright .
+\newblock The {C}oncurrency {C}hallenge, {\em IEEE {D}esign \& {T}est of
+  {C}omputers} {\bf 25}(4):~312--320.
+
+\harvarditem{Kadin \harvardand\ Reda}{2008}{frequencyAndVoltage}
+Kadin, M. \harvardand\ Reda, S.  \harvardyearleft 2008\harvardyearright .
+\newblock Frequency and {V}oltage {P}lanning for {M}ulti-{C}ore {P}rocessors
+  {U}nder {T}hermal {C}onstraints, {\em Computer {D}esign, 2008. {ICCD} 2008.
+  {IEEE} {I}nternational {C}onference on}, IEEE, pp.~463--470.
+
+\harvarditem{Mack}{2003}{endOfSemiconductors}
+Mack, C.~A.  \harvardyearleft 2003\harvardyearright .
+\newblock The end of the {S}emiconductor {I}ndustry {A}s {W}e {K}now {I}t, {\em
+  Proceedings of {SPIE}: Optical Microlithography {XVI}}, Vol. 5040, {SPIE},
+  pp.~21--31.
+
+\harvarditem{Mack}{2011}{fiftyYearsOfMoores}
+Mack, C.~A.  \harvardyearleft 2011\harvardyearright .
+\newblock Fifty {Years} of {M}oore's {Law}, {\em Semiconductor Manufacturing,
+  IEEE Transactions on} {\bf 24}(2):~202--207.
+
+\harvarditem{McCarthy}{1981}{historyOfLisp}
+McCarthy, J.  \harvardyearleft 1981\harvardyearright .
+\newblock History of {LISP}, {\em History of {P}rogramming {L}anguages {I}},
+  {ACM} {N}ew {Y}ork, {NY}, {USA}, pp.~173--185.
+
+\harvarditem{Niemeyer \harvardand\ Knudsen}{2005}{learningJava}
+Niemeyer, P. \harvardand\ Knudsen, J.  \harvardyearleft 2005\harvardyearright .
+\newblock {\em {L}earning {J}ava}, 3rd edn, {O}'{R}eilly {M}edia, {I}nc.
+
+\harvarditem{Parkinson}{1957}{parkinsonsLaw}
+Parkinson, C.~N.  \harvardyearleft 1957\harvardyearright .
+\newblock {\em Parkinson's {L}aw and other studies in administration}, Houghton
+  Mifflin Company, Boston.
+
+\harvarditem{{{P}eyton {J}ones}}{1989}{paraFuncImp}
+{{P}eyton {J}ones}, S.~L.  \harvardyearleft 1989\harvardyearright .
+\newblock Parallel {I}mplementations of {F}unctional {P}rogramming {L}anguages,
+  {\em The {C}omputer {J}ournal} {\bf 32}(2):~175--186.
+
+\harvarditem{Prechelt}{2000}{languageComparison}
+Prechelt, L.  \harvardyearleft 2000\harvardyearright .
+\newblock An {E}mpirical {C}omparison of {S}even {P}rogramming {L}anguages,
+  {\em Computer} {\bf 33}(10):~23--29.
+
+\harvarditem{Rosser}{1984}{lambdaHighlights}
+Rosser, J.~B.  \harvardyearleft 1984\harvardyearright .
+\newblock Highlights of the {H}istory of the {L}ambda-{C}alculus, {\em Annals
+  of the {H}istory of {C}omputing} {\bf 6}(4):~337--349.
+
+\harvarditem{Sutter}{2005}{theFreeLunchIsOver}
+Sutter, H.  \harvardyearleft 2005\harvardyearright .
+\newblock The free lunch is over: a fundamental turn toward concurrency in
+  software, {\em Dr {D}obb's {J}ournal} {\bf 30}(3).
+\newblock \url{http://www.gotw.ca/publications/concurrency-ddj.htm}: [Online;
+  accessed 20-October-2012].
+
+\harvarditem{Sutter \harvardand\ Larus}{2005}{concurrencyChallenges}
+Sutter, H. \harvardand\ Larus, J.  \harvardyearleft 2005\harvardyearright .
+\newblock Software and the {C}oncurrency {R}evolution, {\em Queue} {\bf
+  3}(7):~54--62.
+
+\harvarditem{Turing}{1936}{turing1936}
+Turing, A.  \harvardyearleft 1936\harvardyearright .
+\newblock On {C}omputable {N}umbers, {W}ith an {A}pplication to the
+  {E}ntscheidungsproblem, {\em Proceedings {o}f the {L}ondon {M}athematical
+  {S}ociety}, number~42 in {\em 2}, pp.~230--265.
+
+\end{thebibliography}

@@ -1,0 +1,463 @@
+% project proposal
+\documentclass[12pt,a4paper]{article}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{harvard}
+\usepackage{lipsum}
+\usepackage{color, soul}
+
+\title{Computing Project\\UFCE3B-40-3\\Project Draft}
+\author{Neil Donnelly\\10032122\\
+\texttt{neil.m.donnelly@gmail.com}
+}
+\date{\today}
+
+% title page
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{quote}
+    \begin{center}\Large Exploiting Multi-Core Processors through Functional Programming
+    \end{center}
+\end{quote}
+    \begin{center}
+        {\fontsize{50}{60}\selectfont $\lambda$}
+    \end{center}
+\newpage
+
+% acknowlegements
+\doublespacing
+\pagestyle{empty}
+
+\vspace*{\fill}
+    \begin{center}
+        \Large Acknowledgements \\
+        \large
+        To Ron Burgundy\ldots You stay classy\\
+    \end{center}
+\vspace*{\fill}
+\newpage
+
+% abstract page
+\begin{abstract}
+\lipsum[1-2]
+\end{abstract}
+\newpage
+
+% contents page
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+
+\newpage
+
+% start of text
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\doublespacing
+% start introduction of report
+
+% set the citation style to dcu and the connector to &
+\citationstyle{dcu}
+\renewcommand{\harvardand}{\&}
+
+\section{Introduction}
+\subsection{Context}
+\subsubsection{Moore's Law}
+
+In 1965, George Moore observes that the number of components which can be deployed onto a semiconductor integrated circuit, or `chip' appears to be exponentially doubling every year \cite{fiftyYearsOfMoores}. Moore conjectures that this trend will continue for the proceeding ten years; with increasing chip area, decreasing feature size and improved circuit designs \cite{endOfSemiconductors}.
+
+Moore does not however, observe that such rapid growth is infinitely sustainable, and predicts a declination in the rate of exponential growth to a doubling of components over a more sobering two year interval \cite{fiftyYearsOfMoores}.
+
+This observation is known as Moore's law, and drives semiconductor development with the inevitability of a self-fulfilling prophecy. Indeed, development out paces the law, resulting in a doubling of components in cycles of circa 18 months \cite{fiftyYearsOfMoores}.
+
+\subsubsection{The Benefits of Moore's Prophecy} 
+
+The dramatic increases in semiconductor development result in chips which are cheaper, lighter, faster, less power hungry and more reliable than their predecessors \cite{fiftyYearsOfMoores}. This almost mystical effect of Moore's law on the semiconductor industry allows for \cite{fiftyYearsOfMoores}  \textit{`a life without tradeoffs'}, in which the cost of producing chip components continues to reduce along with their size. The net result being an almost constant production cost for manufacturers and an environment in which further chip development appears to be protected from traditional economic factors \cite{fiftyYearsOfMoores}.
+
+The cumulative effect of exponential gains gives present day chips incredible power and complexity, which both underpin the continued growth of the software industry and facilitate an inevitability of ubiquitous computing. Indeed, many processing intensive applications which are taken for granted, such as high definition video would be inconceivable without the exponential performance gains of which Moore's Law professes \cite{theKillRule}.
+
+\subsubsection{Moore's Gap}
+
+Unfortunately, whilst `The Law' continues unabated, the level of performance which can be wrung from any given chip is beginning to decrease \cite{theKillRule}. This gap between the law's continued proliferation of micro architecture and the real world performance gains follows Pollock's Law \cite{thousandCoreChips}, which states that doubling the logic of a processor core results in performance gains of a mere 40\%.
+
+Pollocks Law is further compounded by what is proving to be an end to Chris Mack's \textit{`no tradeoff'} era \cite{fiftyYearsOfMoores}. The faster, smaller, less power hungry transistors rely upon voltages scaling down along with their size \cite{frequencyAndVoltage}. Unfortunately, with the laws of physics being less than accommodating in this regard; this is not currently possible \cite{frequencyAndVoltage}. The net result is that the designers are unable to furnish the world with the ever increasing clock speeds to which it is accustomed. This \textit{`Moore's Gap'} \cite{theKillRule} requires that chip designers implement new chip architectures in order to circumvent the immense power demands and thermal output which are the consequence of complex, high frequency cores \cite{frequencyAndVoltage}.
+
+\subsubsection{A New Breed of Processor}
+
+In order to bridge the expanding gap between Moore's Law and real world performance; manufacturers turn their focus from producing chips which sport massively powerful single cores to the development of `multi-core' processors \cite{thousandCoreChips,frequencyAndVoltage}. This new breed of chip comprises several processing cores, which run at lower clock speeds; the net result being that the aforementioned power and thermal constraints are conveniently sidestepped when implemented with an adequate frequency and power management scheme \cite{frequencyAndVoltage}.
+
+Unfortunately however, it is hypothesised \cite{thousandCoreChips} that continuation of multi-core development again results in unfeasible power demands, which are again attributed to the issue of voltage scaling. It is estimated that a single chip built upon a 300mm$^{2}$ processor die will require around 1000 watts of power in order to operate \cite{thousandCoreChips}.
+
+It is therefore proposed that development of new `many-core' processing architectures which are able to provide a panacea to the issues of voltage scaling \cite{thousandCoreChips}. The many-core architecture is similar to that of multi-core, with a significant reduction in core complexity and proliferation in the number of cores on any given chip. The result is a processor comprised of a plethora of much simpler cores, which being mindful of Pollock's Law allows for processors with the highest possible performance to complexity ratio \cite{thousandCoreChips}.
+
+\subsubsection{A New Breed of Problem}
+
+In 1967, Gene Amdahl addresses the AFIPS Spring Joint Computer Conference \cite{amdahl}. He argues in favour of more powerful single cores; stating that for the vast majority of cases only a fraction of a program's code could be effectively parallelized \cite{amdahl}. Amdahl's observations, simply put, state that the performance gains from a multi-processor or multi-core architecture are limited by the volume of serial code which is present in any given system. \cite{thousandCoreChips}.
+
+A re-evaluation of Amdahl's Law \cite{reevaluateAmdahl} suggests that the initial observations regarding the volume of system code which can be parallelized may be misleading. Gustafson \cite{reevaluateAmdahl} conjectures that Amdahl's Law does not account for the problem size scaling with the available processing power, and that it is natural for software engineers to take advantage of new hardware in previously unforeseen ways. This hypothesis is further supported by Hill \& Marty \cite{amdahlsLawMultiCore}; who postulate that a reconciliation between Amdahl's observation and Gustafson's re-evaluation is required in order for the continued exploitation of Moore's Law. Unfortunately, there is no perfect solution to draw upon. The current consensus however, is that it is imperative for software engineers to begin to find ways in which to parallelize increasingly greater percentages of any given system in order to harness the maximum amount of available processing power \cite{reevaluateAmdahl,thousandCoreChips,amdahlsLawMultiCore}.
+
+Herb Sutter \cite{theFreeLunchIsOver} recalls a pattern of chip and software development, which through the 1990's is known as \textit{"Andy giveth, and Bill taketh away"}. This refers to the performance gains created by Intel's chips and the subsequent, almost inevitable expansion of the latest Windows release to consume the benefits thereof. This phenomenon however, is not exclusive to software created by the Microsoft corporation; but has perpetuated itself over the lifespan of the software industry \cite{theFreeLunchIsOver}. In what appears to be software development's interpretation of Parkinson's Law \cite{parkinsonsLaw}; increases in chip throughput are rarely treated with a high level of delicacy \cite{theFreeLunchIsOver}. The result is software which appears to expand over the available resources in an almost effortless manner.
+
+This laissez-faire attitude towards development stems from the knowledge that no matter how inefficient a software product may be; within 18 - 24 months such inefficiency will be counterposed by further increased core speeds \cite{theFreeLunchIsOver}. However, in a similar manner to which Chris Mack's \textit{`no tradeoff'} era no longer applies to chip development \cite{fiftyYearsOfMoores}; this \textit{`free lunch'} for software developers appears to have reached its terminus \cite{theFreeLunchIsOver}. Indeed, with it being suggested that more cores and lower speeds are the way in which to bridge Moore's Gap; many vendors could begin to see the performance of their products diminish significantly on newer hardware \cite{theFreeLunchIsOver,concurrencyChallenges}.
+
+In response, a different approach is required \cite{concurrencyChallenges}. Creating safe, threaded software for anything other than a trivial application is demanding, difficult and expensive \cite{concurrencyChallenges}. With the future being multi-core, it appears that the software industry should seek to adapt to this new parallel world if it is to continue to advance. Somewhat ironically, a paradigm which may facilitate this brave new world of parallel development is published in the 1930's and implemented in the 1950's. It is known as functional programming, and predates what is widely considered to be the foundation of computing; the universal Turing machine  \cite{historyOfLisp,churchTuringThesis,promisesOfFunctionalProgramming}.
+
+\subsubsection{Language Selection}
+
+In all endeavours it is important to use the correct tool for the job at hand. Selection of a programming language will influence factors such as the effort required to complete the code, its runtime efficiency, memory usage, reliability and portability \cite{languageComparison}. Conveniently, the ease at which robust concurrent systems may be produced is also influenced by the implementation language \cite{paraFuncImp,promisesOfFunctionalProgramming}.
+
+In 1989 Peyton Jones \cite{paraFuncImp} postulates that functional programming is inherently suited towards the production of parallel systems. The conclusion reached is an expectation that functional programming and parallelism will begin to find more widespread use \cite{paraFuncImp}. More recently, the realisation that the industry requires tools more suited to developing concurrent code is gaining further acceptance \cite{promisesOfFunctionalProgramming}. The purported benefits of these tools must therefore be investigated in order to determine if they are worthwhile ventures.
+
+
+\subsection{Research Question}
+
+Can functional programming exploit the potential performance gains of multi-core processors? 
+
+%Start Background of report BACKGROUND
+\newpage
+\section{Background}
+
+\subsection{Concurrency}
+
+\subsubsection{State}
+
+Any discussion regarding concurrency should likely begin with the consideration of both state and mutability. This discussion is no different.
+
+\begin{quote}
+    An object is said to ``have state" if its behaviour is influenced by its history. \cite{structureAndInterpretation}
+\end{quote}
+
+The seminal book; Structure and Interpretation of Computer Programs \cite{structureAndInterpretation} is the companion text for class 6.001 at the Massachusetts Institute of Technology. Between the years of 1980 and 2008, 6.001 fulfils the role of introducing first year students to programming and software engineering at one of the leading institutions for technological research and computer science.
+
+What's interesting about the text is that it patiently waits until page 217 before approaching the matters of state, modularity and objects \cite{structureAndInterpretation}. Prior to page 217, students are instead introduced to concepts such as expressions, linear recursion, tree recursion, iteration and data abstraction. Indeed, the first appearance of an assignment operator occurs on page 220, with almost 50\% of the book having elapsed \cite{structureAndInterpretation}.
+
+In contrast, if compared to a recommended text for programming 101 at another institution, for instance: Learning Java \cite{learningJava}. It is found that the first appearance of the assignment operator is on page 31; the related heading of Instance Variables being only 12 pages further ahead \cite{learningJava}.
+
+Why then, given that assignment and state are fundamental to producing meaningful systems \cite{structureAndInterpretation} is there such a delay regarding this particular discussion? Thankfully, Abelson and Sussman are not beyond detailing their motives.
+
+\begin{quote}
+    With objects, we must be concerned with how a computational object can change and yet maintain its identity. This will force us to abandon our old substitution model of computation in favour of a more mechanistic but less theoretically tractable \textit{environmental model} of computation. \cite{structureAndInterpretation}
+\end{quote}
+
+It would appear that the addition of the assignment operator and the concept of mutable state is of concern to the authors. With the results of their functions becoming less mathematically defined and more unpredictable, they have reached the somewhat counter-intuitive conclusion that assignment is in fact a more complex subject to comprehend than recursion \cite{structureAndInterpretation}. A conclusion which the vast majority of first year computing students would, most likely, emphatically refute. They elaborate further, detailing the primary culprit of this increased complexity.
+
+\begin{quote}
+    The difficulties of dealing with objects, change, and identity are a fundamental consequence of the need to grapple with time in our computational models. Those difficulties become even greater when we allow the concurrent execution of programs. \cite{structureAndInterpretation}
+\end{quote}
+
+%fix
+
+Naturally, with Structure and Interpretation of Computer Programs focusing on the functional language of SCHEME, there is less of a reliance upon assignment when discussing the basics of the language. However, Abelson \& Sussman clearly state 
+
+There is no escaping the issue that developing concurrent software is difficult \cite{concurrencyChallenges,theConcurrencyChallenge}.
+
+Ah \cite{theConcurrencyChallenge} \cite{concurrencyChallenges} \cite{theConcurrencyChallenge}
+
+
+\subsubsection{Mutability}
+
+Mutable objects bad
+
+Threads - concurrency - simultaneous execution - multi cores 
+
+single processor - simulated concurrency - interleaved
+
+avoid producing inconsistent data 
+
+- more threads the more difficult more steps - difficult
+
+- on the programmer - clojure not a parallel programming language, concurrency comes from programmer deciding what to make concurrent.
+
+-- what we do now to manipulate collection multiple threads
+- lock/synchronised
+- one thread can have lock at time, else it blocks
+- requires co-ordination, you must set it, manual decide to do it, convention.
+- synchronised can only help you with single step job.
+
+-- can't enforce locks, people must choose to do this, no enforcement, difficult to keep track of what's been locked - devs may not lock. decide later to share something, must now figure how to retrofit the locks.
+
+-- bottleneck on multi cpu machine, as blocking -- no longer a maybe
+
+-- single lock is too much, readers block other readers, locking out readers as well as writers.
+-- reader lock solution = special kind of lock, make a multi-reader single writer block, one writer at a time. writers still wait for readers.
+
+-- copy on write collections -- unusual, good multi-threaded propertied. when collection is changed, copy is made inside and then atomically switched, so no locks required. reads are not blocked.
+
+problem with copy-on-write collections : very expensive to write, as full copy made. use for mostly read occasional write.
+
+-- multi-step interaction still requires a lock for c-o-w collections. that's all you get in java or c\#, still only talking about collections.
+
+-- persistant data structure in functional programming - structure is immutable. so to change you need to produce new DS, only. trick with persistant taka structure is -- maintains performance guattuntees of the data structure. new versions cannot be full copies, linear time to copy everything is bad, so need a trick to make the change. share structure between changes. 
+
+-- magic of clojure persistant hashmap/vector -
+
+-- structural sharing - shares as much structure with the update as possible. 
+
+-- thread safety, data structure can never change, thread safety -- no exceptions thrown from clojure structures
+
+
+-- back to locking --
+in real life, multiple activities and multiple data structures. - very hard. need to control more than one data asset in one operation.
+
+-- two options - coarse granulaity locking = create lock, this lock you use to control this set of things
+-- fine gran lock = acquisition of one lock -- can be documented well; very safe, safest if you're gonna use locks -- confusing if you're gonna use multiple sets of locks -- need to know what locks to use for data structures, not good to be locking multiple data structures, queuing for set locks resut in much needless blocking; also questions about reading. fine gran -- lock the data structures, but you will need multiple locks; very dangerous (where most programmes end up) when software changes to need threads where there was never a need. new requirements. remembering previous strategy for locking will make such things impossible. basic strategy is a lock order - A= a,b Y= b,a - recepie for deadlock - A gets a Y gets b - difficult to enforce locking orders, numbered order, alphabetical ordered. fine grain gives beter throughput than coarse grained locks. should i lock while reading?
+
+--- concurrency methods ---
+conventional way -- direct references to things that can change - soon as you do it you're stuck with it. lock n' hope for best - manual - all decided by convention - not in programming language, convention is outside of the program - bad.
+
+
+--- clojure ---
+must feel that things are changing sometimes - keep the reference, but the reference can mutate, indirect. indirect references to things which never change. can change the reference atomically refFred - at one point in program it refers to one thing, later refers to something else. don't really have a pointer to the structure, have a referemce. references are mutable, only thing which can change - ref types - they have concurrency semantics. must use functions to make them point to diff things via functions, enforced and automatic. 
+
+-- from convention -- to enforcement --
+
+-- no locks! --
+-- three refs in clojure --
+-- var= global values, can also be bound inside other threads - for isolating changes in threads. changes in threads will not cut across to other threads - like special variables in common lisp with thread semantics - stack discipline, will unwind to their initial state
+
+-- refs= transactional structure, co-ordinated changes, can be seen from multiple threads. refs make changes which can be seen from multiple threads vis transactions atomic
+-- software transactional memory system -- application level -- ref can only be changed in transaction, change is atomic and isolated. all changes make to set of refs in transaction - or none - isolated, you don't see the effects of other transactions and they don't see yours till commit -- speculative and automatically retried. transactions will rety so you can be second when attempting transactions. therefore transactions cannot have side effects. refs only manipulated in transactions. All changes appear to happen at the same point in time. there is no staggering of changes. -- consistent view of the entire world - readers never block writers, writers never block readers.
+
+
+--agents= make requests for something to change, will do so in it's own time eventually; other threads can see the changes. agents are like workers, refs are like
+-- manager independant state - agent is responsible for state - you send the agent an action, which says apply this function to whatever state you have inside of yourself.
+- you send actions to agents, the request gets queued up in the agent, and eventually this will eventually happen. high degree of independant. you can request, immediately continue and the request will change eventually. one action per agent serialised by the system. none-blocking. things happen in order -- state is always available, can access it. may not reflect all actions which have been sent to it, but not having to wait is awesome. can make sure the work is done with a wait - so will block. - agent can send actions to other agents, will happen in order - agents can co-operate with transactions, can dispatch action within transaction, will only be sent when it commits, so can tie a side effect.
+
+-- lock the world and give me a valid report -- consistency valuable  -- enforced consistency
+
+
+\subsection{Programming Languages}
+
+\subsubsection{Imperative Programming}
+
+The overwhelming majority of programs in execution today are written in imperative programming languages, which in turn are derived from Alan Turing's Universal Turing Machine \cite{turing1936,ImperativeFunctional}. The nuances of imperative programming require little explanation and are well understood by the computing community in general.
+
+\subsubsection{Functional Programming}
+
+Derived from Alonso Church's untyped lambda ($\lambda$) calculus \cite{church1936}. Functional programming leans towards using immutable data structures where possible and uses a mathematically tractable method of substitution to resolve the values of functions, and subsequently a particular computer program  \cite{structureAndInterpretation,ImperativeFunctional}. In order to understand functional programming however, it is imperative that the $\lambda$ calculus is first discussed.
+
+%LAMBDA
+\subsubsection{$\lambda$}
+
+In 1932 Alonso Church publishes a paper detailing a formal model of computational expression \cite{church1932}. The model is an extension of studies conducted into mathematical functions by Frege in 1893 and intends to allow the proof of computations by methods of substitution and variable binding \cite{lambdaHighlights}. Unfortunately, the paper and the method within are proved inconsistent when subjected to further investigation \cite{lambdaHighlights}.
+
+Unperturbed, Church returns in 1936 with a paper proving the impossibility of the Entscheidungsproblem \cite{church1936,churchTuringThesis}. He does this using a refined and much stronger model of computation; the untyped $\lambda$ calculus \cite{church1936}. Alan Turing independently addresses the same problem, reaching the same conclusion through the computational method of his Universal Turing Machine \cite{turing1936,churchTuringThesis}.
+
+It is further observed that the computational processes of untyped $\lambda$ calculus and Alan Turing's machine are equivalent in the types of functions which they are able to express. This parity between the two calculation methods is formalised as the Church-Turing Thesis \cite{churchTuringThesis,ImperativeFunctional}.
+
+\subsubsection{$\lambda$ Notation \& Evaluation}
+
+It is not the intention to give a complete definition of the calculus, however it is useful to understand some of the core concepts before discussing the features of functional programming languages.
+
+As stated, $\lambda$ calculus works by resolving the values of a function or program by a method of substitution. It consists of what would appear to be limited syntax and expressive potential; however is powerful enough to represent all computable functions \cite{church1936}. The syntax is defined below in Backus-Naur form \cite{bnf}.
+
+\begin{quote}
+    {$<expression> \mbox{ := }  <name> | <function> | <application>$}
+    {$<function> \mbox{ := } \lambda <name>.<expression>$}\newline
+    {$<application> \mbox{ := } <expression><expression> $}\newline
+\end{quote}
+
+The language allows the definition of three different $\lambda$ expressions: names of variables, function definitions and the application of function definitions to either variables, other function definitions or other applications.
+
+A $\lambda$ function (also known as an abstraction) is a representation of an anonymous function, which defines the \emph{name} to the left of the '.' operator as an argument, with the \emph{expression} on the right being the return value \cite{church1936}. Hence the function $\lambda x.x$ would be a function which returns the supplied argument. As functions and names are both expressions, this means that $\lambda$ calculus allows functions to be both supplied as arguments and returned \cite{church1936}.
+
+Expressions in $\lambda$ calculus are evaluated by applying the function on the left to the expression on the right. Parenthesis are used in order to make explicit the order of application. For example, this series of expressions:
+\begin{displaymath}
+    \lambda x.x \lambda y.y \lambda z.z
+\end{displaymath}
+Could parenthesise to:
+\begin{displaymath}
+    (\lambda x.x) ((\lambda y.y) (\lambda z.z))
+\end{displaymath}
+Or alternatively:
+\begin{displaymath}
+    ((\lambda x.x) (\lambda y.y)) (\lambda z.z)
+\end{displaymath}
+
+At this point, it is imperative to understand the difference between variables which have been bound and variables which are free to assume any value. If a function $\lambda x.y$ is declared, the \emph{name} given to it's argument, in this case $x$, is considered bound within the function's \emph{expression}. The result of this variable scoping is that should we supply an argument to $x$, say $t$:
+\begin{displaymath}
+    (\lambda x.y)t
+\end{displaymath}
+Any occurrence of $x$ within the function body $y$ will have the same value as the parameter bound to the $\lambda$ symbol. In this case, the value of $\lambda x$ is $t$. In contrast, $y$ is a variable free to take on any value, as it does not exist within an expression in which $y$ has been bound to a $\lambda$.
+
+This distinction between free and bound variables allows for the same name to be used several times but exist with different values depending on its scope. It also introduces the concept of a closure, in which any functions nested within the expression of another function use that function's bound variable. For example:
+\begin{displaymath}
+    \lambda
+\end{displaymath}
+
+Somewhat interestingly, $\lambda$ calculus only allows the definition of functions which accept a single argument. In order to evaluate multiple arguments, a technique called currying is employed. This consists of creating a function which accepts the first argument. The function then returns another function which will accept the second argument. This continues until such a point that a function is produced which returns an expression. If we consider a function definition which accepts three variables $x,y,z$ and returns another variable $r$; its curried notation would be:
+\begin{displaymath}
+    \lambda x. \lambda y. \lambda z.r
+\end{displaymath}
+In order to invoke the function it must be supplied with three expressions (arguments):
+\begin{displaymath}
+    (((\lambda x. \lambda y. \lambda z.r) t ) u ) v
+\end{displaymath}
+In this, $t$ is supplied to $\lambda x$, $u$ to $\lambda y$ and $v$ to $\lambda z$. Due to the scoping and binding of variables, it is then possible to create an addition function in the following manner:
+\begin{displaymath}
+    ((\lambda x. \lambda y.(x+y))5)6
+\end{displaymath}
+The bound variable $x$  
+
+Applications in $\lambda$ are resolved via a method of reduction, which attempts to produce the simplest possible answer by recursively replacing function definitions with the values of their computations. Take the $\lambda$ application:
+\begin{displaymath}
+    \lambda x.
+\end{displaymath}
+
+
+
+
+
+%LISP
+\subsubsection{LISP}
+
+
+List Processing, or LISP  \cite{historyOfLisp}
+
+
+
+
+
+\subsubsection{Clojure}
+\subsection{How Functional Programming May Help Concurrency}
+
+
+\cite{promisesOfFunctionalProgramming}
+\cite{theFreeLunchIsOver}
+\cite{concurrencyChallenges}
+dsdds
+
+%HYPOTHESIS
+\newpage
+\section{Hypothesis}
+
+It is hypothesised that clojure's immutable data structures and transactional assignment allows developers to produce systems which remain consistent over multiple threads of execution. Furthermore, parallel updates to unordered lists offer an opportunity to both   break down a software problem into much smaller component parts than would otherwise be possible. If future chip architectures are to sacrifice raw serial processing power for greater cumulative throughput across multi, or indeed many cores; then allowing software developers to maintain a consistent view of the system throughout its runtime would appear to be the key to exploiting the potential performance gains of this emergent architecture.
+
+It is therefore postulated that an implementation of a parallel problem in clojure will yield greater performance over the more common imperative languages as the number of system cores increase.
+
+%GOALS AND OBJECTIVES
+\newpage
+\section{Objectives and Test Specification}
+
+\subsection{Objectives}
+
+The overarching objective of this project is to determine if Clojure is able to outperform traditional imperative languages when faced with a suitably concurrent problem. To this end, the same program will be implemented in a number of different languages in order to compare the relative performance of the languages in question. The following metrics will be measured.
+
+\begin{itemize} \itemsep0pt
+    \item Execution time
+    \item Consistency
+    \item Memory usage
+    \item Production time
+\end{itemize}
+
+It is reasonable to assume that imperative languages easily outperform Clojure in terms of execution time on hardware which has fewer cores. Therefore it would also be useful to determine how many cores are required before Clojure:
+
+\begin{enumerate} \itemsep0pt
+    \item Matches the imperative languages for speed.
+    \item Begins to assert execution time dominance.
+\end{enumerate}
+
+Furthermore, it is often the case that languages perform optimally on a specific platform. Hence, ensuring that the code is potable to to different operating systems allows for further analysis of which conditions best facilitate Clojure.
+
+\newpage
+\subsection{Specification}
+
+\subsubsection{Feature set}
+
+\begin{itemize} \itemsep0pt
+        \item \textbf{CPU Intensive Algorithm:} The application attempts to solve a problem which will push the CPU of the host machine to its limit for an extended period of time. 
+        \item \textbf{Multi-Threaded:} The application uses threads in order to take advantage of multiple CPUS.
+        \item \textbf{Shared Data Reads:} The application utilises shared data structures which are read from by multiple threads.
+        \item \textbf{Shared Data Writes:} The application utilises shared data structures which are written to by multiple threads.
+        \item \textbf{Consistency Checking of Shared Data Access:} The application can check its shared data structure for instances of inconsistent reads/writes.
+        \item \textbf{Execution Time Logging:} The application can log it's overall execution time and the execution time of individual threads.
+        \item \textbf{Memory Usage Logging:} The application can log it's minimum, maximum and mean memory usage over the course of its execution.
+        \item \textbf{Cross-Platform Implementation:} The application is executable on different operating systems and architectures in order to determine the most suitable environment for execution.
+        \item \textbf{Test Suite:} The application is validated by a suite of unit tests in order to confirm that it operates correctly.
+        \item \textbf{Reasonable Execution Time:} A run of the application lasts no more than five minutes, enabling a greater number of runs to be executed in a given period of time.
+\end{itemize}
+
+\subsubsection{MoSCoW}
+
+In order to correctly prioritise program features and ensure that the most important requirements are satisfied immediately, the MoSCoW method of feature prioritisation is applied to the feature set \cite{moscow}.
+
+\paragraph{Must:}
+Execution Time Logging,
+Multi-Threaded,
+Shared Data Reads,
+Shared Data Writes
+
+\paragraph{Should:}
+Test Suite,
+Consistency Checking of Shared Data Access
+
+\paragraph{Could:}
+CPU Intensive Algorithm,
+Reasonable Execution Time
+
+\paragraph{Wont:}
+Memory Usage Logging, 
+Cross-Platform Implementation
+
+% TEST SPEC
+
+\newpage
+\subsection{Test Specification}
+
+\subsubsection{Control Group}
+
+In order to measure how effective Clojure is, its performance is to be benchmarked in four metrics:
+
+\begin{itemize} \itemsep0pt
+        \item \textbf{Execution Time :} How quickly an application completes..
+        \item \textbf{Consistency :} The ability of the system to not produce errors when multiple threads are accessing shared data.
+        \item \textbf{Memory Usage :} The amount of memory consumed during execution.
+        \item \textbf{Production Time :} the length of time taken to implement the application.
+\end{itemize}
+
+Clojure will be pitted against a control group, consisting of three different imperative languages, namely:
+
+\begin{itemize} \itemsep0pt
+        \item \textbf{C++ :} In theory the fastest executing language of the group, however also the most difficult to program with, and the most likely to produce inconsistent results.
+        \item \textbf{Java :} The language that Clojure was originally written in and arguably the closest in terms of performance.
+        \item \textbf{Python :} Another popular development language, especially for web based applications and scripting on Linux based systems.
+\end{itemize}
+
+\subsubsection{Methodology}
+
+\paragraph{The Application}
+A concurrent application will be developed in both Clojure and each of the control group languages. The application will perform an identical task in each language, and will involve shared memory, which will be subjected to read/write access from multiple threads.
+
+\paragraph{Production Time}
+
+The time spent in minutes will be recorded in order to satisfy the metric of which language is most suited to intuitive concurrent programming. Unfortunately, as there is only one developer producing all four applications, this metric is somewhat subjective and should be taken lightly. 
+
+\paragraph{Execution of Applications}
+Each of the control group and Clojure applications will be subjected to a series of 100 runs upon several machines of varying architectures and processing capabilities. This is to determine how well Clojure performs in relation to the control group in several different environments. 
+
+\paragraph{Execution Time}
+The time taken in milliseconds to complete a run of the application. Will be logged at the end of each run and subjected to statistical analysis.
+
+\paragraph{Consistency}
+The application will log the consistency of the shared memory, checking it's final state against a set of pre-determined values. Any deviation from the predetermined values will confirm inconsistency. Deviations will be logged and sbjected to statistical analysis.
+
+\paragraph{Memory Usage}
+The minimum, maximum and mean memory usage will be logged upon each execution run and subjected to statistical analysis.
+
+\paragraph{Statistical Analysis}
+Each set of 100 runs will be analysed for it's mean value, standard deviation and P-Value. Likewise, the cumulative results of all runs for each of the control group and Clojure will be subjected to an overall statistical analysis, in order to determine the best overall concurrent language.  
+
+\newpage
+\singlespacing
+\addcontentsline{roc}{section}{References}
+\bibliographystyle{dcu}
+\bibliography{bibliography}
+
+\end{document}
