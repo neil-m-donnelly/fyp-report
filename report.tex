@@ -248,13 +248,11 @@ Derived from Alonso Church's untyped lambda ($\lambda$) calculus \cite{church193
 
 In 1932 Alonso Church publishes a paper detailing a formal model of computational expression \cite{church1932}. The model is an extension of studies conducted into mathematical functions by Frege in 1893 and intends to allow the proof of computations by methods of substitution and variable binding \cite{lambdaHighlights}. Unfortunately, the paper and the method within are proved inconsistent when subjected to further investigation \cite{lambdaHighlights}.
 
-Unperturbed, Church returns in 1936 with a paper proving the impossibility of the Entscheidungsproblem \cite{church1936,churchTuringThesis}. He does this using a refined and much stronger model of computation; the untyped $\lambda$ calculus \cite{church1936}. Alan Turing independently addresses the same problem, reaching the same conclusion through the computational method of his Universal Turing Machine \cite{turing1936,churchTuringThesis}.
+Unperturbed, Church returns in 1936 with a paper proving the impossibility of the Entscheidungsproblem \cite{church1936,churchTuringThesis}. He does this using a refined and much stronger model of computation; the untyped $\lambda$ calculus \cite{church1936}. Independent of Church's work, Alan Turing also addresses the Entscheidungsproblem and reaches the same conclusion through the computational method of his Universal Turing Machine \cite{turing1936,churchTuringThesis}.
 
 It is further observed that the computational processes of untyped $\lambda$ calculus and Alan Turing's machine are equivalent in the types of functions which they are able to express. This parity between the two calculation methods is formalised as the Church-Turing Thesis \cite{churchTuringThesis,ImperativeFunctional}.
 
 \subsubsection{$\lambda$ Notation \& Evaluation}
-
-It is not the intention to give a complete definition of the calculus, however it is useful to understand some of the core concepts before discussing the features of functional programming languages.
 
 As stated, $\lambda$ calculus works by resolving the values of a function or program by a method of substitution. It consists of what would appear to be limited syntax and expressive potential; however is powerful enough to represent all computable functions \cite{church1936}. The syntax is defined below in Backus-Naur form \cite{bnf}.
 
@@ -266,7 +264,7 @@ As stated, $\lambda$ calculus works by resolving the values of a function or pro
 
 The language allows the definition of three different $\lambda$ expressions: names of variables, function definitions and the application of function definitions to either variables, other function definitions or other applications.
 
-A $\lambda$ function (also known as an abstraction) is a representation of an anonymous function, which defines the \emph{name} to the left of the '.' operator as an argument, with the \emph{expression} on the right being the return value \cite{church1936}. Hence the function $\lambda x.x$ would be a function which returns the supplied argument. As functions and names are both expressions, this means that $\lambda$ calculus allows functions to be both supplied as arguments and returned \cite{church1936}.
+A $\lambda$ function (also known as an abstraction) is a representation of an anonymous function, which defines the \emph{name} to the left of the '.' operator as an argument, with the \emph{expression} on the right being the return value \cite{church1936}. Hence the function $\lambda x.x$ would be a function which returns the supplied argument. As functions and names are both expressions, this means that $\lambda$ calculus allows functions to be both supplied as arguments to and returned from other functions \cite{church1936}.
 
 Expressions in $\lambda$ calculus are evaluated by applying the function on the left to the expression on the right. Parenthesis are used in order to make explicit the order of application. For example, this series of expressions:
 \begin{displaymath}
@@ -285,14 +283,17 @@ At this point, it is imperative to understand the difference between variables w
 \begin{displaymath}
     (\lambda x.y)t
 \end{displaymath}
-Any occurrence of $x$ within the function body $y$ will have the same value as the parameter bound to the $\lambda$ symbol. In this case, the value of $\lambda x$ is $t$. In contrast, $y$ is a variable free to take on any value, as it does not exist within an expression in which $y$ has been bound to a $\lambda$.
+Any occurrence of $x$ within the function body $y$ will have the same value as the parameter bound to the $\lambda$ symbol. In this case, the value of $\lambda x$ is $t$. In contrast, $y$ is a variable free to take on any value, as it does not exist within an expression in which $y$ has been bound to a $\lambda$. This distinction between free and bound variables allows for the same name to be used several times but exist with different values depending on its scope.
 
-This distinction between free and bound variables allows for the same name to be used several times but exist with different values depending on its scope. It also introduces the concept of a closure, in which any functions nested within the expression of another function use that function's bound variable. For example:
+The binding of variables to the $\lambda$ operator introduces an important functional aspect known as a closure; in which any functions nested within the body of another function will use the parent function's bound variable. For example:
+
 \begin{displaymath}
-    \lambda
+    ( \lambda x.(\lambda y.xy)y)x
 \end{displaymath}
 
-Somewhat interestingly, $\lambda$ calculus only allows the definition of functions which accept a single argument. In order to evaluate multiple arguments, a technique called currying is employed. This consists of creating a function which accepts the first argument. The function then returns another function which will accept the second argument. This continues until such a point that a function is produced which returns an expression. If we consider a function definition which accepts three variables $x,y,z$ and returns another variable $r$; its curried notation would be:
+Here we have a function which takes the far right argument $x$ and binds it to $\lambda x$. The body of $\lambda x$ consists of another function which takes the value of $y$, binds it to $\lambda y$ and then returns the value of applying $x$ to $y$. Due to the closure, the value of $x$ in $\lambda y$ is the same as that bound to $\lambda x$.
+
+Somewhat interestingly, $\lambda$ calculus only allows the definition of functions which accept a single argument. In order to evaluate multiple arguments, a technique called currying is employed. This consists of creating a function which accepts the first argument. The function then returns another function which will accept the second argument. This continues until such a point that a function is produced which returns a variable or value. Currying is made possible by the use of closures, as bound variables remain bound even within nested functions which are returned. If a function definition which accepts three variables $x,y,z$ and returns another variable $r$ is considered; its curried notation would be:
 \begin{displaymath}
     \lambda x. \lambda y. \lambda z.r
 \end{displaymath}
@@ -300,20 +301,19 @@ In order to invoke the function it must be supplied with three expressions (argu
 \begin{displaymath}
     (((\lambda x. \lambda y. \lambda z.r) t ) u ) v
 \end{displaymath}
-In this, $t$ is supplied to $\lambda x$, $u$ to $\lambda y$ and $v$ to $\lambda z$. Due to the scoping and binding of variables, it is then possible to create an addition function in the following manner:
+In this, $t$ is supplied to $\lambda x$, $u$ to $\lambda y$ and $v$ to $\lambda z$. Due to the scoping and binding of variables, it is then possible to create a function which adds two numbers together, supplied with the arguments 5 and 6:
 \begin{displaymath}
-    ((\lambda x. \lambda y.(x+y))5)6
-\end{displaymath}
-The bound variable $x$  
-
-Applications in $\lambda$ are resolved via a method of reduction, which attempts to produce the simplest possible answer by recursively replacing function definitions with the values of their computations. Take the $\lambda$ application:
-\begin{displaymath}
-    \lambda x.
+    ((\lambda x. \lambda y.(x+y) ) 5 ) 6
 \end{displaymath}
 
-
-
-
+Applications in $\lambda$ are resolved via a method called $\beta$ reduction, which attempts to produce the simplest possible answer by replacing function definitions with the values of their computations. Take the $\lambda$ application:
+\begin{displaymath}
+    (\lambda x.x)5
+\end{displaymath}
+Which reduces to:
+\begin{displaymath}
+    5
+\end{displaymath}
 
 %LISP
 \subsubsection{LISP}
