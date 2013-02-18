@@ -97,6 +97,11 @@ Mack, C.~A.  \harvardyearleft 2011\harvardyearright .
 \newblock Fifty {Years} of {M}oore's {Law}, {\em Semiconductor Manufacturing,
   IEEE Transactions on} {\bf 24}(2):~202--207.
 
+\harvarditem{McCarthy}{1960}{lispPart1}
+McCarthy, J.  \harvardyearleft 1960\harvardyearright .
+\newblock Recursive functions of symbolic expressions and their computation by
+  machine, {P}art 1, {\em Communications of the {ACM}} {\bf 3}(4):~184--195.
+
 \harvarditem{McCarthy}{1981}{historyOfLisp}
 McCarthy, J.  \harvardyearleft 1981\harvardyearright .
 \newblock History of {LISP}, {\em History of {P}rogramming {L}anguages {I}},
