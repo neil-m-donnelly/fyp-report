@@ -10,32 +10,62 @@
 \contentsline {section}{\numberline {2}Background}{7}
 \contentsline {subsection}{\numberline {2.1}Programming Languages}{7}
 \contentsline {subsubsection}{\numberline {2.1.1}Imperative Programming}{7}
-\contentsline {subsubsection}{\numberline {2.1.2}Functional Programming}{7}
-\contentsline {subsubsection}{\numberline {2.1.3}$\lambda $}{7}
-\contentsline {subsubsection}{\numberline {2.1.4}$\lambda $ Notation \& Evaluation}{8}
-\contentsline {subsubsection}{\numberline {2.1.5}LISP}{12}
-\contentsline {subsubsection}{\numberline {2.1.6}Clojure}{13}
-\contentsline {subsection}{\numberline {2.2}Concurrency}{13}
-\contentsline {subsubsection}{\numberline {2.2.1}State}{13}
-\contentsline {subsubsection}{\numberline {2.2.2}Mutability}{15}
-\contentsline {subsection}{\numberline {2.3}How Functional Programming May Help Concurrency}{19}
-\contentsline {section}{\numberline {3}Hypothesis}{20}
-\contentsline {section}{\numberline {4}Objectives and Test Specification}{21}
-\contentsline {subsection}{\numberline {4.1}Objectives}{21}
-\contentsline {subsection}{\numberline {4.2}Specification}{22}
-\contentsline {subsubsection}{\numberline {4.2.1}Feature set}{22}
-\contentsline {subsubsection}{\numberline {4.2.2}MoSCoW}{23}
-\contentsline {paragraph}{Must:}{23}
-\contentsline {paragraph}{Should:}{23}
-\contentsline {paragraph}{Could:}{23}
-\contentsline {paragraph}{Wont:}{23}
-\contentsline {subsection}{\numberline {4.3}Test Specification}{24}
-\contentsline {subsubsection}{\numberline {4.3.1}Control Group}{24}
-\contentsline {subsubsection}{\numberline {4.3.2}Methodology}{24}
-\contentsline {paragraph}{The Application}{24}
-\contentsline {paragraph}{Production Time}{25}
-\contentsline {paragraph}{Execution of Applications}{25}
-\contentsline {paragraph}{Execution Time}{25}
-\contentsline {paragraph}{Consistency}{25}
-\contentsline {paragraph}{Memory Usage}{25}
-\contentsline {paragraph}{Statistical Analysis}{25}
+\contentsline {subsubsection}{\numberline {2.1.2}Functional Programming}{8}
+\contentsline {subsubsection}{\numberline {2.1.3}$\lambda $}{9}
+\contentsline {subsubsection}{\numberline {2.1.4}$\lambda $ Notation \& Evaluation}{9}
+\contentsline {subsubsection}{\numberline {2.1.5}LISP}{14}
+\contentsline {subsubsection}{\numberline {2.1.6}Clojure}{17}
+\contentsline {subsection}{\numberline {2.2}Concurrency}{17}
+\contentsline {subsubsection}{\numberline {2.2.1}State and Mutability}{18}
+\contentsline {subsubsection}{\numberline {2.2.2}Race Conditions}{20}
+\contentsline {subsubsection}{\numberline {2.2.3}Deadlock}{21}
+\contentsline {subsection}{\numberline {2.3}Concurrent Strategies}{21}
+\contentsline {subsubsection}{\numberline {2.3.1}Locking}{22}
+\contentsline {subsubsection}{\numberline {2.3.2}Coarse Granularity Locking}{24}
+\contentsline {subsubsection}{\numberline {2.3.3}Fine Granularity Locking}{24}
+\contentsline {subsubsection}{\numberline {2.3.4}Copy On Write Collections}{25}
+\contentsline {subsection}{\numberline {2.4}Clojure's Concurrent features}{26}
+\contentsline {subsection}{\numberline {2.5}GPGPU}{28}
+\contentsline {subsubsection}{\numberline {2.5.1}What is GPGPU}{28}
+\contentsline {subsubsection}{\numberline {2.5.2}GPGPU Benefits}{28}
+\contentsline {subsubsection}{\numberline {2.5.3}GPGPU Issues}{29}
+\contentsline {subsubsection}{\numberline {2.5.4}GPGPU Summary}{29}
+\contentsline {subsection}{\numberline {2.6}Continuing research}{29}
+\contentsline {section}{\numberline {3}Hypothesis}{30}
+\contentsline {section}{\numberline {4}Objectives}{31}
+\contentsline {subsection}{\numberline {4.1}Objectives}{31}
+\contentsline {subsection}{\numberline {4.2}Platform and language}{32}
+\contentsline {section}{\numberline {5}Requirements Analysis}{33}
+\contentsline {subsection}{\numberline {5.1}Feature List}{33}
+\contentsline {subsubsection}{\numberline {5.1.1}Must}{33}
+\contentsline {subsubsection}{\numberline {5.1.2}Should}{34}
+\contentsline {subsubsection}{\numberline {5.1.3}Could}{34}
+\contentsline {subsubsection}{\numberline {5.1.4}Wont}{34}
+\contentsline {subsection}{\numberline {5.2}Test Approach}{35}
+\contentsline {subsubsection}{\numberline {5.2.1}Control Group}{35}
+\contentsline {subsubsection}{\numberline {5.2.2}Methodology}{36}
+\contentsline {paragraph}{The Application}{36}
+\contentsline {paragraph}{Production Time}{36}
+\contentsline {paragraph}{Execution of Applications}{36}
+\contentsline {paragraph}{Execution Time}{36}
+\contentsline {paragraph}{Consistency}{36}
+\contentsline {paragraph}{Memory Usage}{37}
+\contentsline {paragraph}{Statistical Analysis}{37}
+\contentsline {paragraph}{Test Machine}{37}
+\contentsline {subsection}{\numberline {5.3}The Travelling Salesman Problem}{37}
+\contentsline {subsubsection}{\numberline {5.3.1}Problem Definition}{37}
+\contentsline {subsubsection}{\numberline {5.3.2}Search Method}{38}
+\contentsline {subsubsection}{\numberline {5.3.3}Acceptance Tests}{39}
+\contentsline {section}{\numberline {6}Design}{41}
+\contentsline {subsection}{\numberline {6.1}Architecture}{41}
+\contentsline {subsection}{\numberline {6.2}Components}{41}
+\contentsline {subsubsection}{\numberline {6.2.1}Run Controller}{42}
+\contentsline {subsubsection}{\numberline {6.2.2}File Reader}{42}
+\contentsline {subsubsection}{\numberline {6.2.3}Permutation Calculator}{43}
+\contentsline {subsubsection}{\numberline {6.2.4}Distance Calculator}{43}
+\contentsline {subsubsection}{\numberline {6.2.5}Results Collector}{43}
+\contentsline {subsubsection}{\numberline {6.2.6}Statistics Calculator}{43}
+\contentsline {subsubsection}{\numberline {6.2.7}Results Printer}{43}
+\contentsline {subsection}{\numberline {6.3}Flow of Control}{44}
+\contentsline {section}{\numberline {7}Results}{44}
+\contentsline {section}{\numberline {8}Conclusion}{44}

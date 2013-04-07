@@ -25,6 +25,13 @@ Backus, J.~W.  \harvardyearleft 1959\harvardyearright .
   {P}roceedings of the {I}nternational {C}onference on {I}nformation
   {P}rocessing}, {UNESCO}, pp.~125--132.
 
+\harvarditem{Banning}{1979}{sideEffects}
+Banning, J.~P.  \harvardyearleft 1979\harvardyearright .
+\newblock {A}n {E}fficient {W}ay to {F}ind the {S}ide {E}ffects of {P}rocedure
+  {C}alls and the {A}liases of {V}ariables, {\em {P}roceedings of the 6th {ACM}
+  {SIGACT} - {SIGPLAN} {S}ymposium on {P}rinciples of {P}rogramming
+  {L}anguages}, {ACM}, pp.~29--42.
+
 \harvarditem[Barendregt et~al.]{Barendregt, Manzonetto \harvardand\
   Plasmeijr}{2013}{ImperativeFunctional}
 Barendregt, H., Manzonetto, G. \harvardand\ Plasmeijr, R.  \harvardyearleft
@@ -37,6 +44,11 @@ Borkar, S.  \harvardyearleft 2007\harvardyearright .
 \newblock Thousand {C}ore {C}hips-{A} {T}echnology {P}erspective, {\em {DAC}
   '07 {P}roceedings of the 44th annual {D}esign {A}utomation {C}onference},
   {ACM} {N}ew {Y}ork, {NY}, {USA}, pp.~746--749.
+
+\harvarditem{Chitty}{2012}{gpuVsCPU}
+Chitty, D.  \harvardyearleft 2012\harvardyearright .
+\newblock {F}ast {P}arallel {G}enetic {P}rogramming: {M}ulti-core {CPU}
+  {V}ersus {M}any-core {GPU}, {\em {S}oft {C}omputing} {\bf 16}(10).
 
 \harvarditem{Church}{1932}{church1932}
 Church, A.  \harvardyearleft 1932\harvardyearright .
@@ -58,10 +70,39 @@ Copeland, J.  \harvardyearleft 2004\harvardyearright .
 \newblock The {C}hurch-{T}uring {T}hesis, {\em Neuro{Q}uantology} {\bf
   2}(2):~101--115.
 
+\harvarditem{Dictionary.com}{2012}{concurrentDef}
+Dictionary.com  \harvardyearleft 2012\harvardyearright .
+\newblock Definition of concurrent,
+  \url{http://dictionary.reference.com/browse/concurrent?s=t}: [Online;
+  accessed 26-October-2012].
+
+\harvarditem{Fogus \harvardand\ Houser}{2011}{joyOfClojure}
+Fogus, M. \harvardand\ Houser, C.  \harvardyearleft 2011\harvardyearright .
+\newblock {\em {T}he {J}oy of {C}lojure}, {M}anning {P}ublications {C}o.
+
+\harvarditem[Goetz et~al.]{Goetz, Peierls, Bloch, Bowbeer, Holmes \harvardand\
+  Lea}{2006}{javaConcurrency}
+Goetz, B., Peierls, T., Bloch, J., Bowbeer, J., Holmes, D. \harvardand\ Lea, D.
+   \harvardyearleft 2006\harvardyearright .
+\newblock {\em {J}ava {C}oncurrency {I}n {P}ractice}, {A}ddison-{W}esley.
+
+\harvarditem{Graham}{2003}{beatingTheAverages}
+Graham, P.  \harvardyearleft 2003\harvardyearright .
+\newblock {B}eating the {A}verages,
+  \url{http://www.gotw.ca/publications/concurrency-ddj.htm}: [Online; accessed
+  27-October-2012].
+
 \harvarditem{Gustafson}{1988}{reevaluateAmdahl}
 Gustafson, J.~L.  \harvardyearleft 1988\harvardyearright .
 \newblock Reevaluating {A}mdahl's {L}aw, {\em Communications of the {ACM}} {\bf
   31}(5):~532--533.
+
+\harvarditem{Hickey}{2009}{areWeThereYet}
+Hickey, R.  \harvardyearleft 2009\harvardyearright .
+\newblock {A}re {W}e {T}here {Y}et,
+  \url{http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey}:
+  [Online; accessed 15-October-2012].
+\newblock {JVM} {L}anguages {S}ummit.
 
 \harvarditem{Hill \harvardand\ Marty}{2008}{amdahlsLawMultiCore}
 Hill, M.~D. \harvardand\ Marty, M.~R.  \harvardyearleft 2008\harvardyearright .
@@ -79,6 +120,13 @@ Hwu, W., Keutzer, K. \harvardand\ Mattson, T.~G.  \harvardyearleft
   2008\harvardyearright .
 \newblock The {C}oncurrency {C}hallenge, {\em IEEE {D}esign \& {T}est of
   {C}omputers} {\bf 25}(4):~312--320.
+
+\harvarditem{Johnson \harvardand\ McGeoch}{1997}{tsp}
+Johnson, D.~S. \harvardand\ McGeoch, L.~A.  \harvardyearleft
+  1997\harvardyearright .
+\newblock {T}he {T}ravelling {S}alesman {P}roblem: {A} {C}ase {S}tudy in
+  {L}ocal {O}ptimization, {\em {L}ocal {S}earch in {C}ombinatorial
+  {O}ptimization} pp.~215--310.
 
 \harvarditem{Kadin \harvardand\ Reda}{2008}{frequencyAndVoltage}
 Kadin, M. \harvardand\ Reda, S.  \harvardyearleft 2008\harvardyearright .
@@ -121,15 +169,36 @@ Parkinson, C.~N.  \harvardyearleft 1957\harvardyearright .
 \newblock Parallel {I}mplementations of {F}unctional {P}rogramming {L}anguages,
   {\em The {C}omputer {J}ournal} {\bf 32}(2):~175--186.
 
+\harvarditem{Poulding}{2012}{gpuTutorial}
+Poulding, S.  \harvardyearleft 2012\harvardyearright .
+\newblock {T}utorial: High performance {SBSE} {U}sing {C}ommodity {G}raphics
+  {C}ards, {\em {SSBSE} 2012}, {S}pringer, p.~29.
+
 \harvarditem{Prechelt}{2000}{languageComparison}
 Prechelt, L.  \harvardyearleft 2000\harvardyearright .
 \newblock An {E}mpirical {C}omparison of {S}even {P}rogramming {L}anguages,
   {\em Computer} {\bf 33}(10):~23--29.
 
+\harvarditem[Risco-Martin et~al.]{Risco-Martin, Lanchares \harvardand\
+  Coello-Coello}{2012}{gpuSoftComputing}
+Risco-Martin, J.~L., Lanchares, J. \harvardand\ Coello-Coello, C.~A. (eds)
+  \harvardyearleft 2012\harvardyearright .
+\newblock {\em {S}oft {C}omputing {S}pecial {I}ssue on {E}volutionary
+  {C}omputation on {G}eneral {P}urpose {G}raphics {P}rocessing {U}nits}, Vol.
+  16(10), {S}pringer.
+
 \harvarditem{Rosser}{1984}{lambdaHighlights}
 Rosser, J.~B.  \harvardyearleft 1984\harvardyearright .
 \newblock Highlights of the {H}istory of the {L}ambda-{C}alculus, {\em Annals
   of the {H}istory of {C}omputing} {\bf 6}(4):~337--349.
+
+\harvarditem[Schaeffer et~al.]{Schaeffer, Lu, Szafron \harvardand\
+  Lake}{1993}{bruteForce}
+Schaeffer, J., Lu, P., Szafron, D. \harvardand\ Lake, R.  \harvardyearleft
+  1993\harvardyearright .
+\newblock {A} {R}e-{E}xamination of {B}rute-{F}orce {S}earch, {\em
+  {P}roceedings of the {AAAI} {F}all {S}ymposium on {G}ames: {P}lanning and
+  {L}earning}, pp.~51--58.
 
 \harvarditem{Sutter}{2005}{theFreeLunchIsOver}
 Sutter, H.  \harvardyearleft 2005\harvardyearright .
@@ -148,5 +217,11 @@ Turing, A.  \harvardyearleft 1936\harvardyearright .
 \newblock On {C}omputable {N}umbers, {W}ith an {A}pplication to the
   {E}ntscheidungsproblem, {\em Proceedings {o}f the {L}ondon {M}athematical
   {S}ociety}, number~42 in {\em 2}, pp.~230--265.
+
+\harvarditem[Yoo et~al.]{Yoo, Harman \harvardand\ Ur}{2011}{gpuMinimisation}
+Yoo, S., Harman, M. \harvardand\ Ur, S.  \harvardyearleft 2011\harvardyearright
+  .
+\newblock {H}ighly {S}calable {M}ulti {O}bjective {T}est {S}uite {M}inimisation
+  {U}sing {G}raphics {C}ards, {\em {SSBSE} 2011}, {S}pringer, pp.~219--236.
 
 \end{thebibliography}

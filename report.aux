@@ -44,7 +44,8 @@
 \citation{theFreeLunchIsOver,concurrencyChallenges}
 \citation{concurrencyChallenges}
 \citation{concurrencyChallenges}
-\citation{historyOfLisp,churchTuringThesis,promisesOfFunctionalProgramming}
+\citation{church1936,lispPart1,joyOfClojure}
+\citation{promisesOfFunctionalProgramming}
 \citation{languageComparison}
 \citation{paraFuncImp,promisesOfFunctionalProgramming}
 \citation{paraFuncImp}
@@ -53,29 +54,58 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6}Language Selection}{6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Research Question}{6}}
 \citation{turing1936,ImperativeFunctional}
-\citation{church1936}
-\citation{structureAndInterpretation,ImperativeFunctional}
-\citation{church1932}
-\citation{lambdaHighlights}
-\citation{lambdaHighlights}
+\citation{joyOfClojure}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Background}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Programming Languages}{7}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Imperative Programming}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Functional Programming}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}$\lambda $}{7}}
+\citation{joyOfClojure}
+\citation{joyOfClojure}
+\citation{church1936,lispPart1}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Functional Programming}{8}}
+\citation{church1932}
+\citation{lambdaHighlights}
+\citation{lambdaHighlights}
 \citation{church1936,churchTuringThesis}
 \citation{church1936}
 \citation{turing1936,churchTuringThesis}
 \citation{churchTuringThesis,ImperativeFunctional}
 \citation{church1936}
 \citation{bnf}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}$\lambda $ Notation \& Evaluation}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}$\lambda $}{9}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}$\lambda $ Notation \& Evaluation}{9}}
 \citation{church1936}
 \citation{church1936}
+\citation{sideEffects}
 \citation{lispPart1,historyOfLisp}
+\citation{lispPart1,historyOfLisp,beatingTheAverages}
 \citation{historyOfLisp}
+\citation{structureAndInterpretation}
+\citation{lispPart1,structureAndInterpretation}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.5}LISP}{14}}
+\@writefile{lop}{\contentsline {code}{\numberline {1}{\ignorespaces Parenthesised LISP with prefixed operands}}{14}}
+\newlabel{code:lisp}{{1}{14}}
+\@writefile{lop}{\contentsline {code}{\numberline {2}{\ignorespaces Polish prefix notation resolution}}{14}}
+\newlabel{code:lisp2}{{2}{14}}
+\citation{structureAndInterpretation}
+\citation{lispPart1,historyOfLisp}
+\citation{structureAndInterpretation}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Lists and Atoms}}{15}}
+\newlabel{fig:listsAndAtoms}{{1}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A more complex list structure}}{15}}
+\newlabel{fig:listsAndAtoms2}{{2}{15}}
 \citation{lispPart1}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.5}LISP}{12}}
+\citation{beatingTheAverages}
+\citation{joyOfClojure}
+\citation{lispPart1}
+\citation{beatingTheAverages,joyOfClojure}
+\@writefile{lop}{\contentsline {code}{\numberline {3}{\ignorespaces LISP as written in editor}}{16}}
+\newlabel{code:lispInText}{{3}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces LISP code as a data structure}}{16}}
+\newlabel{fig:codeAsData}{{3}{16}}
+\citation{concurrentDef}
+\citation{javaConcurrency}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.6}Clojure}{17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Concurrency}{17}}
 \citation{structureAndInterpretation}
 \citation{structureAndInterpretation}
 \citation{structureAndInterpretation}
@@ -83,59 +113,132 @@
 \citation{learningJava}
 \citation{learningJava}
 \citation{structureAndInterpretation}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.6}Clojure}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Concurrency}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}State}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}State and Mutability}{18}}
 \citation{structureAndInterpretation}
 \citation{structureAndInterpretation}
 \citation{structureAndInterpretation}
-\citation{concurrencyChallenges,theConcurrencyChallenge}
-\citation{theConcurrencyChallenge}
+\citation{areWeThereYet}
 \citation{concurrencyChallenges}
+\citation{concurrencyChallenges,theConcurrencyChallenge}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Race Conditions}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Race conditions on mutable data}}{20}}
+\newlabel{fig:concurrentProblem}{{4}{20}}
+\citation{javaConcurrency}
+\citation{javaConcurrency,theConcurrencyChallenge}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Deadlock}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Concurrent Strategies}{21}}
+\citation{javaConcurrency}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Deadlock of two threads}}{22}}
+\newlabel{fig:deadlock1}{{5}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Locking}{22}}
 \citation{theConcurrencyChallenge}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Mutability}{15}}
+\citation{javaConcurrency}
+\citation{javaConcurrency}
+\citation{javaConcurrency}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Coarse Granularity Locking}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Fine Granularity Locking}{24}}
+\citation{javaConcurrency}
+\citation{javaConcurrency}
+\citation{javaConcurrency}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Copy On Write Collections}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Clojure's Concurrent features}{26}}
 \citation{promisesOfFunctionalProgramming}
 \citation{theFreeLunchIsOver}
 \citation{concurrencyChallenges}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}How Functional Programming May Help Concurrency}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Hypothesis}{20}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Objectives and Test Specification}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Objectives}{21}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Specification}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Feature set}{22}}
+\citation{gpuTutorial}
+\citation{gpuTutorial}
+\citation{gpuTutorial}
+\citation{gpuSoftComputing}
+\citation{amdahl}
+\citation{amdahl}
+\citation{gpuMinimisation}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}GPGPU}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}What is GPGPU}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}GPGPU Benefits}{28}}
+\citation{gpuTutorial}
+\citation{gpuTutorial}
+\citation{gpuVsCPU}
+\citation{thousandCoreChips,gpuTutorial}
+\citation{gpuMinimisation}
+\citation{gpuVsCPU}
+\citation{gpuSoftComputing}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}GPGPU Issues}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.4}GPGPU Summary}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Continuing research}{29}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Hypothesis}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Objectives}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Objectives}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Platform and language}{32}}
 \citation{moscow}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}MoSCoW}{23}}
-\@writefile{toc}{\contentsline {paragraph}{Must:}{23}}
-\@writefile{toc}{\contentsline {paragraph}{Should:}{23}}
-\@writefile{toc}{\contentsline {paragraph}{Could:}{23}}
-\@writefile{toc}{\contentsline {paragraph}{Wont:}{23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Test Specification}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Control Group}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Methodology}{24}}
-\@writefile{toc}{\contentsline {paragraph}{The Application}{24}}
-\@writefile{toc}{\contentsline {paragraph}{Production Time}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Execution of Applications}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Execution Time}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Consistency}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Memory Usage}{25}}
-\@writefile{toc}{\contentsline {paragraph}{Statistical Analysis}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Requirements Analysis}{33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Feature List}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Must}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Should}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Could}{34}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Wont}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Test Approach}{35}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Control Group}{35}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Methodology}{36}}
+\@writefile{toc}{\contentsline {paragraph}{The Application}{36}}
+\@writefile{toc}{\contentsline {paragraph}{Production Time}{36}}
+\@writefile{toc}{\contentsline {paragraph}{Execution of Applications}{36}}
+\@writefile{toc}{\contentsline {paragraph}{Execution Time}{36}}
+\@writefile{toc}{\contentsline {paragraph}{Consistency}{36}}
+\citation{gpuMinimisation}
+\citation{tsp}
+\citation{tsp}
+\@writefile{toc}{\contentsline {paragraph}{Memory Usage}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Statistical Analysis}{37}}
+\@writefile{toc}{\contentsline {paragraph}{Test Machine}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}The Travelling Salesman Problem}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Problem Definition}{37}}
+\citation{tsp}
+\citation{tsp}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Cities on a plane, displaying routes between pairs}}{38}}
+\newlabel{fig:tsp1}{{6}{38}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Search Method}{38}}
+\citation{bruteForce}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.3}Acceptance Tests}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Design}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Architecture}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Components}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Interaction between program components}}{42}}
+\newlabel{fig:components}{{7}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Run Controller}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}File Reader}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Permutation Calculator}{43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.4}Distance Calculator}{43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.5}Results Collector}{43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.6}Statistics Calculator}{43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.7}Results Printer}{43}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Flow of Control}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Results}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{44}}
 \bibstyle{dcu}
 \bibdata{bibliography}
 \harvardcite{structureAndInterpretation}{Abelson \harvardand \ Sussman}{Abelson \harvardand \ Sussman}{1996}
 \harvardcite{theKillRule}{Agarwal \harvardand \ Levy}{Agarwal \harvardand \ Levy}{2007}
 \harvardcite{amdahl}{Amdahl}{Amdahl}{1967}
 \harvardcite{bnf}{Backus}{Backus}{1959}
+\harvardcite{sideEffects}{Banning}{Banning}{1979}
 \harvardcite{ImperativeFunctional}{Barendregt, Manzonetto \harvardand \^^MPlasmeijr}{Barendregt et~al.}{2013}
 \harvardcite{thousandCoreChips}{Borkar}{Borkar}{2007}
+\harvardcite{gpuVsCPU}{Chitty}{Chitty}{2012}
 \harvardcite{church1932}{Church}{Church}{1932}
 \harvardcite{church1936}{Church}{Church}{1936}
 \harvardcite{moscow}{Clegg}{Clegg}{1994}
 \harvardcite{churchTuringThesis}{Copeland}{Copeland}{2004}
+\harvardcite{concurrentDef}{Dictionary.com}{Dictionary.com}{2012}
+\@writefile{roc}{\contentsline {section}{References}{45}}
+\harvardcite{joyOfClojure}{Fogus \harvardand \ Houser}{Fogus \harvardand \ Houser}{2011}
+\harvardcite{javaConcurrency}{Goetz, Peierls, Bloch, Bowbeer, Holmes \harvardand \^^MLea}{Goetz et~al.}{2006}
+\harvardcite{beatingTheAverages}{Graham}{Graham}{2003}
 \harvardcite{reevaluateAmdahl}{Gustafson}{Gustafson}{1988}
+\harvardcite{areWeThereYet}{Hickey}{Hickey}{2009}
 \harvardcite{amdahlsLawMultiCore}{Hill \harvardand \ Marty}{Hill \harvardand \ Marty}{2008}
 \harvardcite{promisesOfFunctionalProgramming}{Hinsen}{Hinsen}{2009}
 \harvardcite{theConcurrencyChallenge}{Hwu, Keutzer \harvardand \^^MMattson}{Hwu et~al.}{2008}
-\@writefile{roc}{\contentsline {section}{References}{27}}
+\harvardcite{tsp}{Johnson \harvardand \ McGeoch}{Johnson \harvardand \ McGeoch}{1997}
 \harvardcite{frequencyAndVoltage}{Kadin \harvardand \ Reda}{Kadin \harvardand \ Reda}{2008}
 \harvardcite{endOfSemiconductors}{Mack}{Mack}{2003}
 \harvardcite{fiftyYearsOfMoores}{Mack}{Mack}{2011}
@@ -144,8 +247,12 @@
 \harvardcite{learningJava}{Niemeyer \harvardand \ Knudsen}{Niemeyer \harvardand \ Knudsen}{2005}
 \harvardcite{parkinsonsLaw}{Parkinson}{Parkinson}{1957}
 \harvardcite{paraFuncImp}{{{P}eyton {J}ones}}{{{P}eyton {J}ones}}{1989}
+\harvardcite{gpuTutorial}{Poulding}{Poulding}{2012}
 \harvardcite{languageComparison}{Prechelt}{Prechelt}{2000}
+\harvardcite{gpuSoftComputing}{Risco-Martin, Lanchares \harvardand \^^MCoello-Coello}{Risco-Martin et~al.}{2012}
 \harvardcite{lambdaHighlights}{Rosser}{Rosser}{1984}
+\harvardcite{bruteForce}{Schaeffer, Lu, Szafron \harvardand \^^MLake}{Schaeffer et~al.}{1993}
 \harvardcite{theFreeLunchIsOver}{Sutter}{Sutter}{2005}
 \harvardcite{concurrencyChallenges}{Sutter \harvardand \ Larus}{Sutter \harvardand \ Larus}{2005}
 \harvardcite{turing1936}{Turing}{Turing}{1936}
+\harvardcite{gpuMinimisation}{Yoo, Harman \harvardand \ Ur}{Yoo et~al.}{2011}

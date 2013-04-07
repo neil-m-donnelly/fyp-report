@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.1.30)  18 FEB 2013 19:02
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.1.30)  7 APR 2013 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -147,165 +147,328 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-) (./report.aux)
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks24
+\float@box=\box28
+\@float@everytoks=\toks25
+\@floatcapt=\box29
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks26
+)
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen115
+\Gin@req@width=\dimen116
+)
+\@float@every@code=\toks27
+\c@code=\count102
+ (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen115
-\scratchbox=\box28
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen116
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count103
+\scratchdimen=\dimen117
+\scratchbox=\box30
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen118
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks29
+) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 20.
- (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 29.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Calculating math sizes for size <50> on input line 28.
+LaTeX Font Info:    Calculating math sizes for size <50> on input line 37.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <50> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <34.99985> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <50> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <34.99985> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <50> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <34.99985> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <50> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <34.99985> not available
-(Font)              size <24.88> substituted on input line 28.
+(Font)              size <24.88> substituted on input line 37.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 46.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 
-Overfull \hbox (3.6297pt too wide) in paragraph at lines 47--47
+Overfull \hbox (3.6297pt too wide) in paragraph at lines 56--56
 \OT1/ptm/m/n/10.95 mau-ris. Nam arcu libero, non-ummy eget, con-sectetuer id, v
 ulpu-tate a, magna.
  []
 
 
-Overfull \hbox (0.10356pt too wide) in paragraph at lines 47--47
+Overfull \hbox (0.10356pt too wide) in paragraph at lines 56--56
 \OT1/ptm/m/n/10.95 Donec ve-hic-ula au-gue eu neque. Pel-len-tesque habi-tant m
 orbi tris-tique senec-
  []
 
 [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
  (./report.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
- [1])
+ [1] [2])
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
- [2]
+ [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
  [1] [2]
-Overfull \hbox (1.97643pt too wide) in paragraph at lines 95--96
+Overfull \hbox (1.97643pt too wide) in paragraph at lines 104--105
 \OT1/ptm/m/n/12 sively pow-er-ful sin-gle cores to the de-vel-op-ment of `multi
 -core' pro-ces-sors ([]Borkar,
  []
 
-[3] [4] [5] [6]
-Overfull \hbox (2.97554pt too wide) in paragraph at lines 136--137
-\OT1/ptm/m/n/12 Derived from Alonso Church's un-typed lambda ($\OML/cmm/m/it/12
- ^^U$\OT1/ptm/m/n/12 ) cal-cu-lus ([]Church, 1936). Func-
+[3] [4] [5] [6] [7]
+Overfull \hbox (4.79694pt too wide) in paragraph at lines 158--159
+\OT1/ptm/m/n/12 fam-ily of func-tional lan-guages were de-rived from Alonso Chu
+rch's un-typed lambda
  []
 
-[7]
-Overfull \hbox (1.64667pt too wide) in paragraph at lines 152--155
+[8] [9]
+Overfull \hbox (1.64667pt too wide) in paragraph at lines 174--177
 []$\OML/cmm/m/it/12 < expression > [] < name > \OMS/cmsy/m/n/12 j \OML/cmm/m/it
 /12 < function > \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 < application >$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--155
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
 
  []
 
-[8] [9] [10] [11] [12]
-Overfull \hbox (6.32935pt too wide) in paragraph at lines 246--247
+[10] [11] [12] [13] [14] <./images/list.jpg, id=74, 441.65pt x 167.62625pt>
+File: ./images/list.jpg Graphic file (type jpg)
+
+<use ./images/list.jpg>
+Package pdftex.def Info: ./images/list.jpg used on input line 277.
+(pdftex.def)             Requested size: 220.82445pt x 83.81291pt.
+
+Overfull \hbox (9.3297pt too wide) in paragraph at lines 282--283
+[]\OT1/ptm/m/n/12 The above list in \OT1/ptm/m/it/12 Fig-ure 1[] \OT1/ptm/m/n/1
+2 is rep-re-sented in \OT1/ptm/m/it/12 ``box-and-pointer no-ta-tion" \OT1/ptm/m
+/n/12 ([]Abelson
+ []
+
+<./images/list2.jpg, id=75, 467.7475pt x 250.9375pt>
+File: ./images/list2.jpg Graphic file (type jpg)
+ <use ./images/list2.jpg>
+Package pdftex.def Info: ./images/list2.jpg used on input line 286.
+(pdftex.def)             Requested size: 233.87317pt x 125.46843pt.
+
+[15 <./images/list.jpg> <./images/list2.jpg>]
+<./images/codeAsData.jpg, id=79, 467.7475pt x 317.185pt>
+File: ./images/codeAsData.jpg Graphic file (type jpg)
+
+<use ./images/codeAsData.jpg>
+Package pdftex.def Info: ./images/codeAsData.jpg used on input line 304.
+(pdftex.def)             Requested size: 233.87317pt x 158.5921pt.
+ [16 <./images/codeAsData.jpg>] [17]
+Overfull \hbox (6.32935pt too wide) in paragraph at lines 341--342
 []\OT1/ptm/m/n/12 The sem-i-nal book; Struc-ture and In-ter-pre-ta-tion of Com-
 puter Pro-grams ([]Abelson
  []
 
-[13] [14]
-Overfull \hbox (4.36113pt too wide) in paragraph at lines 287--292
-[]\OT1/ptm/m/n/12 -- what we do now to ma-nip-u-late col-lec-tion mul-ti-ple th
-reads - lock/synchronised
+[18] [19] <./images/raceConditions1.png, id=93, 440.64626pt x 359.3425pt>
+File: ./images/raceConditions1.png Graphic file (type png)
+
+<use ./images/raceConditions1.png>
+Package pdftex.def Info: ./images/raceConditions1.png used on input line 368.
+(pdftex.def)             Requested size: 286.41667pt x 233.56985pt.
+ [20 <./images/raceConditions1.png>]
+Overfull \hbox (0.38037pt too wide) in paragraph at lines 377--378
+\OT1/ptm/m/n/12 shared re-sources and then each re-quire ac-cess to the re-sour
+ces the other has locked. 
  []
 
-[15] [16] [17] [18] [19] [20]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 369.
+<./images/deadlock1.png, id=97, 465.74pt x 295.1025pt>
+File: ./images/deadlock1.png Graphic file (type png)
+
+<use ./images/deadlock1.png>
+Package pdftex.def Info: ./images/deadlock1.png used on input line 382.
+(pdftex.def)             Requested size: 302.72742pt x 191.81433pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22 <./images/deadlock1.png>] [23] [24] [25] [26] [27] [28] [29] [30]
+[31] [32]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 547.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 369.
- [21] [22] [23] [24] [25] [26] (./report.bbl [27]) [28] (./report.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 547.
+ [33] [34] [35]
+[36] <./images/tsp2.png, id=148, 652.4375pt x 401.5pt>
+File: ./images/tsp2.png Graphic file (type png)
+ <use ./images/tsp2.png>
+Package pdftex.def Info: ./images/tsp2.png used on input line 642.
+(pdftex.def)             Requested size: 326.21794pt x 200.7495pt.
+
+[37] [38 <./images/tsp2.png>] [39] [40]
+File: ./images/tsp2.png Graphic file (type png)
+ <use ./images/tsp2.png>
+Package pdftex.def Info: ./images/tsp2.png used on input line 697.
+(pdftex.def)             Requested size: 326.21794pt x 200.7495pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[41] [42] [43] [44] (./report.bbl [45]
+Underfull \hbox (badness 3179) in paragraph at lines 89--94
+[]| | \OT1/ptm/m/n/12 Gra-ham, P. (2003).  Beat-ing the Av-er-ages, $\OT1/pcr/m
+/n/12 http : / / www . gotw . ca /
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 89--94
+\OT1/pcr/m/n/12 publications / concurrency-[]ddj . htm$\OT1/ptm/m/n/12 : [On-li
+ne; ac-cessed 27-
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 100--106
+[]| | \OT1/ptm/m/n/12 Hickey, R. (2009).  Are We There Yet, $\OT1/pcr/m/n/12 ht
+tp : / / www . infoq . com /
+ []
+
+
+Underfull \hbox (badness 3872) in paragraph at lines 100--106
+\OT1/pcr/m/n/12 presentations / Are-[]We-[]There-[]Yet-[]Rich-[]Hickey$\OT1/ptm
+/m/n/12 : [On-line;
+ []
+
+[46]) [47] (./report.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 25.12pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 2530 strings out of 493488
- 32159 string characters out of 3146892
- 178079 words of memory out of 3000000
- 5811 multiletter control sequences out of 15000+200000
- 27515 words of font info for 61 fonts, out of 3000000 for 9000
+ 3263 strings out of 493488
+ 43961 string characters out of 3146892
+ 195307 words of memory out of 3000000
+ 6483 multiletter control sequences out of 15000+200000
+ 32497 words of font info for 68 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 27i,8n,22p,1086b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,8n,24p,1086b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -313,10 +476,10 @@ mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (33 pages, 143266 bytes).
+Output written on report.pdf (53 pages, 269087 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
+ 217 PDF objects out of 1000 (max. 8388607)
+ 145 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
